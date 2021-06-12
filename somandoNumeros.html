@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color:black;
+            color: white;
+            font-size: 10px; 
+        }
+
+        div#interface {       
+            margin: 150px auto;
+            padding: 50px 50px 50px 200px;
+            width: 700px;
+            height: 100% vh; 
+            background-color: rgba(39, 39, 35, 0.952);
+        }
+
+        h1 {
+            font-size: 5rem;
+            color: #d87093;
+            padding-left: 100px;
+  
+        }
+        div#resultado {
+            margin-top: 20px;
+            color: palevioletred;
+            font-weight: bold;
+            font-size: 3rem;
+            border-radius: 50px;
+        }
+
+        input#txtnumero1, input#txtnumero2 {
+            width: 200px;
+            height: 50px;
+            background-color: #e0d5d5b7;
+
+        }
+
+        input#btnSomar {
+            width: 200px;
+            height: 50px;
+            background-color: #d87093;
+            margin-left: 10px;
+            font-size: 40px;
+            font-family: cursive;
+            font-weight: bold;
+            color: rgba(216, 79, 79, 0.87);
+            vertical-align: middle;
+            text-align: center;
+            padding-bottom: 60px;
+            cursor: pointer;
+        }
+
+        input#btnSomar:hover {
+            background-color: #978f8ff8;
+            transition: 1s;
+            color: #000000af;
+        }
+        div#resultado {
+            margin-top: 40px;
+        }
+    </style>
+    <title>Somando Números</title>
+</head>
+<body>
+    <div id="interface">
+        <h1>Somando Valores</h1>
+        <input type="number" name="txtnumero1" id="txtnumero1">  +
+        <input type="number" name="txtnumero2" id="txtnumero2">
+        <input type="button" value="Somar" onclick="somar()" id="btnSomar">
+        <div id="resultado">Resultado: </div>
+    </div>
+    <script>
+        function somar (){
+            var tnumero1 =document.getElementById('txtnumero1')
+            var tnumero2 =document.getElementById('txtnumero2')
+            var resultado = document.getElementById('resultado')
+            var numero1 = Number(tnumero1.value)
+            var numero2 = Number(tnumero2.value)
+            var soma= numero1 + numero2
+            resultado.innerHTML = `O resultado desta soma é igual a ${soma}`
+        }
+    </script>
+</body>
+</html>
